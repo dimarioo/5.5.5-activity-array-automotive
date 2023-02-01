@@ -102,8 +102,26 @@ class car extends Vehicle{
         this.fuel = 10
         this.scheduleService = false
 
-       
+       loadPassenger(num);{
+        if (this.passenger < this.maximumPassengers){
+            avaliableRoom = 0
+        }
 
+       }
+       start();{
+        if (fuel > 0){
+            start == true
+        }else{
+            start == false
+        }
+       }
+       scheduleService(mileage);{
+        if  (mileage > 300000){
+            timeformaintenance == true
+        }else{
+            timeformaintenance == false
+        }
+       }
 
     }
 }
