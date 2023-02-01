@@ -11,7 +11,8 @@ class Vehicle {
         this.numberOfWheels = 0;
     }
 
-    start() {
+}
+    start(); {
         if (this.fuel > 0) {
             return this.started = true;
             console.log("engine started...!!!");
@@ -20,7 +21,7 @@ class Vehicle {
             console.log("engine cannot start...");
         }
     }
-    accelerate() {
+    accelerate(); {
         if (this.started) {
             if (this.fuel > 0) {
                 console.log(this.speed += 1);
@@ -33,7 +34,7 @@ class Vehicle {
             alert("You need to start the engine first.");
         }
     }
-    decelerate() {
+    decelerate(); {
         if (this.started) {
             if (this.fuel > 0) {
                 if (this.speed > 0) {
@@ -51,14 +52,14 @@ class Vehicle {
             alert("You need to start the engine first.");
         }
     }
-    stop() {
+    stop(); {
         this.started = false;
     }
 
-    drive() {
+    drive(); {
         accelerate();
     }
-    brake() {
+    brake(); {
         decelerate();
     }
 
@@ -72,7 +73,7 @@ class Vehicle {
       
     }
 
-    typeOfVehicle(wheels) {
+    typeOfVehicle(wheels); {
         if (this.numberOfWheels == 8 && 8 == wheels) {
             console.log(this.model + " " + this.make + " is a Truck");
         } else if (this.numberOfWheels == 4 && 4 == wheels) {
@@ -83,9 +84,26 @@ class Vehicle {
             console.log("Unknown type of vehicle");
         }
     }
-}
+
+
 
 //This exports things you want to use from this "module", more info in readme
 module.exports = {
     Vehicle
+}
+
+class car extends Vehicle{
+    constructor(make, model, year, color, mileage ){
+        super(make, model, year, color, mileage )
+        this.maximumPassengers = 5
+        this.passenger = 0
+        this.numberOfWheels = 4
+        this.maximumSpeed = 160
+        this.fuel = 10
+        this.scheduleService = false
+
+       
+
+
+    }
 }
